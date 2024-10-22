@@ -10,11 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var zeroPrcView: UIButton!
+    @IBOutlet weak var tenPrcView: UIButton!
+    @IBOutlet weak var twentyPrcView: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func percentagPressed(_ sender: UIButton) {
+        
+    }
+    
 }
 
