@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func percentagPressed(_ sender: UIButton) {
-        
+        print("button pressed \(sender.titleLabel!.text!)")
     }
     
 }
