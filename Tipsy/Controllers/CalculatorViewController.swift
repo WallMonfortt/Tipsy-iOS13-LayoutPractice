@@ -18,6 +18,7 @@ class CalculatorViewController: UIViewController {
     var btnSelected: String?
     var people: Int?
     var totalBill: Float?
+    var totalTip: Float?
 
     @IBAction func percentagPressed(_ sender: UIButton) {
         print("button pressed \(sender.titleLabel!.text!)")
@@ -62,14 +63,25 @@ class CalculatorViewController: UIViewController {
         print(totalBill!)
         
         calculateAmount(Float(people!), percentage, totalBill!)
+        
+        self.performSegue(withIdentifier: "goToResult", sender: self)
 
     }
     
     func calculateAmount(_ people: Float, _ percentage: Double, _ totalAmount: Float) {
         let amount = (totalAmount + (totalAmount * Float(percentage)));
-        let finalAmount = amount / Float(people)
-        print("the final amount is: \(finalAmount)")
+        totalTip = amount / Float(people)
+        print("the final amount is: \(String(describing: totalTip))")
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.people = people
+            destinationVC.percentage = btnSelected
+            destinationVC.tip = String(totalTip!)
+        }
     }
     
 }

@@ -209,6 +209,7 @@
                         <outlet property="tenPrcView" destination="Rwu-A9-VfH" id="WZh-5B-B3U"/>
                         <outlet property="twentyPrcView" destination="CKa-YD-tVk" id="4Iq-JM-Rui"/>
                         <outlet property="zeroPrcView" destination="NIj-D2-Uq5" id="0fn-d4-BLl"/>
+                        <segue destination="Dnf-m2-FPm" kind="presentation" identifier="goToResult" id="IGi-nq-Kq6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -220,17 +221,17 @@
             <objects>
                 <viewController id="Dnf-m2-FPm" customClass="ResultViewController" customModule="Tipsy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E4v-0r-cyo">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GFW-ie-8bn">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aU-5P-VMi">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="305"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="314"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="R1s-2F-kbN">
-                                                <rect key="frame" x="92" y="91" width="206" height="123"/>
+                                                <rect key="frame" x="92" y="95.666666666666686" width="206" height="123"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfb-0w-mI8">
                                                         <rect key="frame" x="0.0" y="0.0" width="206" height="54"/>
@@ -239,7 +240,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="56.32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw2-SX-JMK">
-                                                        <rect key="frame" x="40.666666666666657" y="69" width="125" height="54"/>
+                                                        <rect key="frame" x="40.666666666666657" y="68.999999999999986" width="125" height="54"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                                         <color key="textColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -255,7 +256,7 @@
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvt-Ab-FKX">
-                                        <rect key="frame" x="0.0" y="305" width="390" height="505"/>
+                                        <rect key="frame" x="0.0" y="314" width="390" height="520"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with 10% tip." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5n-yI-QwU">
                                                 <rect key="frame" x="70" y="0.0" width="250" height="150"/>
@@ -287,7 +288,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-gt-7rc">
-                                <rect key="frame" x="98" y="756" width="194" height="54"/>
+                                <rect key="frame" x="98" y="780" width="194" height="54"/>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="BK7-DG-T8Y"/>
@@ -317,8 +318,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="settingsLabel" destination="y5n-yI-QwU" id="mR6-eV-rcO"/>
-                        <outlet property="totalLabel" destination="cw2-SX-JMK" id="nGk-zT-tTv"/>
+                        <outlet property="settingsLabel" destination="y5n-yI-QwU" id="nH9-d9-nPC"/>
+                        <outlet property="totalLabel" destination="cw2-SX-JMK" id="yJ3-9U-iYk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLi-Eb-NGd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
